@@ -9,18 +9,18 @@ import java.util.Optional;
 @Service
 public class MemberService {
 
-    @Autowired
-    MemberRepository memberRepository;
+  @Autowired
+  MemberRepository memberRepository;
 
-    public void test() {
-        // 생성
-        memberRepository.save(new Member(1L, "A"));
+  public void test() {
+    // 생성
+    memberRepository.save(new Member(1L, "A"));
 
-        // 조회
-        Optional<Member> member = memberRepository.findById(1L); // 단건 조회
-        List<Member> allMember = memberRepository.findAll(); // 전체 조회
+    // 조회
+    Optional<Member> member = memberRepository.findById(1L); // 단건 조회
+    List<Member> allMember = memberRepository.findAll(); // 전체 조회
 
-        // 삭제
-        memberRepository.deleteById(1L);
-    }
+    // 삭제
+    memberRepository.deleteById(1L);
+  }
 }
